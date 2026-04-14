@@ -159,4 +159,4 @@ There is enough time, but only if you start now.
 
 ---
 
-*Waypoint Compliance Advisory is an SBA-certified SDVOSB based in St. Petersburg, Florida, supporting defense, federal, and commercial organizations through CMMC, NIST 800-171, FedRAMP, and HIPAA compliance engagements. Questions about shop floor scoping, OT segmentation, or CMMC readiness can be directed to [cameron@waypointca.com](mailto:cameron@waypointca.com).*
+*Waypoint Compliance Advisory is an SBA-certified SDVOSB based in DeLand, Florida, supporting defense, federal, and commercial organizations through CMMC, NIST 800-171, FedRAMP, and HIPAA compliance engagements. Questions about shop floor scoping, OT segmentation, or CMMC readiness can be directed to [cameron@waypointca.com](mailto:cameron@waypointca.com).*
