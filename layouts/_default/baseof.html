@@ -12,6 +12,9 @@
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0b33ad64bfac44c094fa32fed3487eb0"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
     <div class="container">
