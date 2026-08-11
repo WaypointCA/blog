@@ -1,0 +1,19 @@
+{{/* Market navigation mirroring the six tabs on waypointca.com, so a reader
+     arriving from a market tab can find that market's writing. Ordered
+     deliberately rather than alphabetically to match the site. */}}
+{{ $current := .current }}
+{{ $ctx := .ctx }}
+<div class="market-filter">
+    <div class="market-filter-inner">
+        <span class="label">Browse by market</span>
+        <a href="{{ "/posts/" | relURL }}" class="market-pill {{ if not $current }}active{{ end }}">All</a>
+        {{ range slice "Federal" "Defense" "Aerospace" "Healthcare" "State" "Manufacturing" }}
+            {{ $term := . }}
+            {{ with index $ctx.Site.Taxonomies.categories (urlize $term) }}
+            <a href="{{ .Page.Permalink }}" class="market-pill {{ if eq $current $term }}active{{ end }}">
+                {{ $term }}<span class="count">{{ len .Pages }}</span>
+            </a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

@@ -1,22 +1,17 @@
 {{ define "main" }}
-<div class="list-page">
-    <h1>{{ .Title }}</h1>
-    
-    {{ range .Pages }}
-    <article class="post-preview">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ if .Site.Params.showReadingTime }}
-            <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
-            {{ end }}
-        </div>
-        {{ with .Params.summary }}
-        <p class="post-excerpt">{{ . }}</p>
-        {{ else }}
-        <p class="post-excerpt">{{ .Summary | plainify | truncate 220 }}</p>
-        {{ end }}
-    </article>
-    {{ end }}
+<section class="page-intro">
+    <div class="page-intro-inner">
+        <span class="eyebrow">Insights</span>
+        <h1>{{ .Title }}</h1>
+        <p>{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} on compliance, security, and the tools that make both sustainable.</p>
+    </div>
+</section>
+
+{{ partial "market-filter.html" (dict "ctx" . "current" "") }}
+
+<div class="container">
+    <div class="card-grid">
+        {{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}
+    </div>
 </div>
 {{ end }}

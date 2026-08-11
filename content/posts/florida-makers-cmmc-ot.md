@@ -3,7 +3,7 @@ title: "Florida Makers and CMMC: The OT Blind Spot on Your Shop Floor"
 date: 2026-04-14
 draft: false
 tags: ["CMMC 2.0", "OT Security", "Manufacturing", "NIST 800-171", "Defense", "Florida"]
-categories: ["Compliance", "Manufacturing"]
+categories: ["Manufacturing"]
 summary: "Your CNC machines, PLCs, and IoT sensors are in scope. The question of whether g-code from a CUI drawing is itself CUI is one of the most contested questions in the CMMC manufacturing world. Here is the defense plan that holds regardless of which reading your assessor brought with them."
 author: "Cameron Hopkin"
 ---

@@ -3,7 +3,7 @@ title: "Florida Gave You the Mandate, Vetoed the Safe Harbor, and Just Funded th
 date: 2026-08-11
 draft: false
 tags: ["Florida", "State Government", "NIST CSF", "Local Government", "Ransomware", "Compliance"]
-categories: ["Compliance", "State"]
+categories: ["State"]
 summary: "Florida is one of the few states that mandates a cybersecurity framework by statute. The alignment deadlines have already passed, the liability safe harbor was vetoed, and as of July 1 there is finally state money on the table. Here is what actually applies to Florida agencies, counties, and cities."
 author: "Cameron Hopkin"
 ---

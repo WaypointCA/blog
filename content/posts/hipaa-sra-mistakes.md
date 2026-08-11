@@ -3,7 +3,7 @@ title: "Five HIPAA SRA Mistakes That Get Practices Fined"
 date: 2026-04-14
 draft: false
 tags: ["HIPAA", "Risk Assessment", "Healthcare", "Compliance", "OCR"]
-categories: ["Compliance", "Healthcare"]
+categories: ["Healthcare"]
 summary: "Most security risk assessments fail on the same handful of gaps. We walk through the findings HHS OCR flags most often and how to close them before an audit."
 author: "Cameron Hopkin"
 ---

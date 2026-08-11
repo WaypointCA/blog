@@ -1,24 +1,20 @@
 {{ define "main" }}
-{{/* Single term page (/tags/fedramp/). Lists the posts carrying the term. */}}
-<div class="list-page">
-    <h1>{{ .Title }}</h1>
-    <p class="list-intro">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} tagged {{ .Title }}.</p>
+<section class="page-intro">
+    <div class="page-intro-inner">
+        <span class="eyebrow">{{ if eq .Data.Plural "categories" }}Market{{ else }}Topic{{ end }}</span>
+        <h1>{{ .Title }}</h1>
+        <p>{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }}.</p>
+    </div>
+</section>
 
-    {{ range .Pages }}
-    <article class="post-preview">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ if .Site.Params.showReadingTime }}
-            <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
-            {{ end }}
-        </div>
-        {{ with .Params.summary }}
-        <p class="post-excerpt">{{ . }}</p>
-        {{ end }}
-    </article>
-    {{ end }}
+{{ if eq .Data.Plural "categories" }}
+{{ partial "market-filter.html" (dict "ctx" . "current" .Title) }}
+{{ end }}
 
-    <p class="back-link"><a href="{{ "/tags/" | relURL }}">← All topics</a></p>
+<div class="container">
+    <div class="card-grid">
+        {{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}
+    </div>
+    <p class="back-link"><a href="{{ "/tags/" | relURL }}">← Browse all topics</a></p>
 </div>
 {{ end }}

@@ -3,7 +3,7 @@ title: "Your FedRAMP Package Has to Be Machine-Readable by September 30"
 date: 2026-08-11
 draft: false
 tags: ["FedRAMP", "FedRAMP 20x", "OSCAL", "Cloud Security", "Federal", "Compliance", "Generative AI"]
-categories: ["Compliance", "Federal"]
+categories: ["Federal"]
 summary: "RFC-0024's machine-readable package requirements were confirmed in NTC-0009 and finalized in the Consolidated Rules for 2026, with initial compliance due September 30, 2026. They apply to existing Rev 5 certifications, not just new applicants, and most providers have not started."
 author: "Cameron Hopkin"
 ---

@@ -3,7 +3,7 @@ title: "FedRAMP 20x Turns Compliance Into Code"
 date: 2026-08-11
 draft: false
 tags: ["FedRAMP", "FedRAMP 20x", "OSCAL", "Cloud Security", "Federal", "Compliance", "Generative AI"]
-categories: ["Compliance", "Federal"]
+categories: ["Federal"]
 summary: "20x is not a version bump. It replaces narrative control descriptions with automated Key Security Indicators, replaces the annual audit with continuous validation, and replaces documents with machine-readable data. Here is what that actually demands of a cloud service provider."
 author: "Cameron Hopkin"
 ---

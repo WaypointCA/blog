@@ -3,7 +3,7 @@ title: "CMMC Level 2 for Small Businesses: What Actually Changed"
 date: 2026-03-14
 draft: false
 tags: ["CMMC 2.0", "NIST 800-171", "Defense", "DIB", "Compliance"]
-categories: ["Compliance"]
+categories: ["Defense"]
 summary: "The final rule is live. Here is what small defense contractors need to know about scoping, POA&M timelines, and what assessors are actually looking for."
 author: "Cameron Hopkin"
 ---

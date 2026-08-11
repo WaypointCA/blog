@@ -3,7 +3,7 @@ title: "CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up."
 date: 2026-08-11
 draft: false
 tags: ["CMMC 2.0", "NIST 800-171", "DFARS", "False Claims Act", "Defense", "DIB", "Compliance"]
-categories: ["Compliance", "Defense"]
+categories: ["Defense"]
 summary: "The certification deadline is gone. The obligations are not, and the one government mechanism that used to catch a bad SPRS score before a lawyer did is paused. Here is what defense contractors should actually be working on."
 author: "Cameron Hopkin"
 ---

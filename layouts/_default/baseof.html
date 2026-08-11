@@ -3,40 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    {{- $desc := "" -}}
+    {{- with .Params.summary }}{{ $desc = . }}
+    {{- else }}{{ with .Description }}{{ $desc = . }}{{ else }}{{ $desc = .Site.Params.description }}{{ end }}{{ end -}}
+    {{- $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) -}}
+    {{- $img := absURL "img/waypoint-og.png" -}}
+
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $desc }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{/* Social cards. Previously absent, so every share rendered as a bare link. */}}
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:image" content="{{ $img }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $desc }}">
+    <meta name="twitter:image" content="{{ $img }}">
+    {{- if .IsPage }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    <meta property="article:author" content="{{ .Params.author | default .Site.Params.author }}">
+    {{- range .Params.tags }}
+    <meta property="article:tag" content="{{ . }}">
+    {{- end }}
+    {{- end }}
+
+    <link rel="icon" href="{{ "img/favicon.ico" | relURL }}" sizes="any">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+
+    {{/* Article schema so posts are eligible for rich results. */}}
+    {{- if .IsPage }}
+    <script type="application/ld+json">
+    {{ dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" .Title
+        "description" $desc
+        "datePublished" (.Date.Format "2006-01-02")
+        "dateModified" (.Lastmod.Format "2006-01-02")
+        "author" (dict "@type" "Person" "name" (.Params.author | default .Site.Params.author) "url" "https://waypointca.com")
+        "publisher" (dict "@type" "Organization" "name" .Site.Params.company "url" "https://waypointca.com")
+        "mainEntityOfPage" .Permalink
+        "keywords" (delimit .Params.tags ", ")
+        | jsonify (dict "indent" "  ")
+    }}
+    </script>
+    {{- end }}
+
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0b33ad64bfac44c094fa32fed3487eb0"}'></script>
     <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <nav class="nav">
-                <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
-                <ul class="nav-links">
-                    {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </nav>
-        </header>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <main class="main-content">
-            {{ block "main" . }}{{ end }}
-        </main>
+<header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+        <a href="{{ .Site.BaseURL }}" class="site-title">Waypoint<span>CA</span></a>
+        <ul class="nav-links">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
+            <li><a href="https://calendly.com/tech-waypointca/30min" class="nav-cta">Book a Consultation</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <footer class="site-footer">
-            <p>&copy; {{ now.Year }} {{ .Site.Params.company }}. All rights reserved.</p>
-            <p><a href="https://waypointca.com">waypointca.com</a></p>
-        </footer>
+<main class="main-content" id="main-content">
+    {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+    <div class="inner">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.company }}. All rights reserved.</p>
+        <p><a href="https://waypointca.com">waypointca.com</a> · <a href="{{ "index.xml" | relURL }}">RSS</a></p>
     </div>
+</footer>
 </body>
 </html>

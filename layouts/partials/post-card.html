@@ -1,0 +1,19 @@
+{{/* One post card. Used by the home grid, list pages, term pages, and related. */}}
+<a href="{{ .Permalink }}" class="post-card">
+    <div class="post-card-body">
+        <div class="card-meta">
+            {{ with index .Params.categories 0 }}<span class="card-category">{{ . }}</span>{{ end }}
+            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            {{ if .Site.Params.showReadingTime }}
+            <span>· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+            {{ end }}
+        </div>
+        <h3>{{ .Title }}</h3>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ else }}<p>{{ .Summary | plainify | truncate 180 }}</p>{{ end }}
+        {{ with .Params.tags }}
+        <div class="card-tags">
+            {{ range first 3 . }}<span>{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+    </div>
+</a>

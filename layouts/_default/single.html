@@ -1,17 +1,22 @@
 {{ define "main" }}
+<div class="container">
 <article class="post">
     <header class="post-header">
+        {{ with index .Params.categories 0 }}
+        <span class="card-category">{{ . }}</span>
+        {{ end }}
         <h1>{{ .Title }}</h1>
         <div class="post-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
             {{ if .Site.Params.showReadingTime }}
-            <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+            <span>· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
             {{ end }}
+            <span>· {{ .Params.author | default .Site.Params.author }}</span>
         </div>
         {{ with .Params.tags }}
         <div class="post-tags">
             {{ range . }}
-            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
             {{ end }}
         </div>
         {{ end }}
@@ -21,8 +26,46 @@
         {{ .Content }}
     </div>
 
-    <footer class="post-footer">
-        <p><a href="{{ .Site.BaseURL }}">← Back to all posts</a></p>
-    </footer>
+    {{/* Prev/next within the posts section. A reader finishing an article
+         previously had exactly one exit link. */}}
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $prev := "" }}{{ $next := "" }}
+    {{ range $i, $p := $posts }}
+        {{ if eq $p.Permalink $.Permalink }}
+            {{ if gt $i 0 }}{{ $next = index $posts (sub $i 1) }}{{ end }}
+            {{ if lt (add $i 1) (len $posts) }}{{ $prev = index $posts (add $i 1) }}{{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if or $prev $next }}
+    <nav class="post-nav" aria-label="Post navigation">
+        {{ with $prev }}
+        <a href="{{ .Permalink }}"><span class="dir">← Older</span><span class="t">{{ .Title }}</span></a>
+        {{ else }}<span></span>{{ end }}
+        {{ with $next }}
+        <a href="{{ .Permalink }}" class="next"><span class="dir">Newer →</span><span class="t">{{ .Title }}</span></a>
+        {{ else }}<span></span>{{ end }}
+    </nav>
+    {{ end }}
+
+    {{/* Related by shared tags, scored by overlap, current post excluded. */}}
+    {{ $related := first 3 (where (.Site.RegularPages.Related .) "Section" "posts") }}
+    {{ with $related }}
+    <section class="related">
+        <h2>Related reading</h2>
+        <div class="card-grid">
+            {{ range . }}{{ partial "post-card.html" . }}{{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <section class="post-cta">
+        <h2>Working through this?</h2>
+        <p>Waypoint Compliance Advisory is an SBA-certified SDVOSB supporting federal, defense, aerospace, healthcare, state, and commercial organizations.</p>
+        <a href="https://calendly.com/tech-waypointca/30min" class="btn">Book a Free Consultation</a>
+    </section>
+
+    <p class="back-link"><a href="{{ "/posts/" | relURL }}">← All posts</a></p>
 </article>
+</div>
 {{ end }}
