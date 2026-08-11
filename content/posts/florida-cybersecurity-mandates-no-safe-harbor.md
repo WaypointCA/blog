@@ -18,7 +18,7 @@ If you run IT for a Florida county, city, special district, or school board, tha
 
 The [Local Government Cybersecurity Act](https://www.flsenate.gov/Session/Bill/2022/7055), created by HB 7055 in 2022 and codified at Florida Statutes 282.3185, is the operative law for counties and municipalities. State agencies sit under 282.318. The local government provisions are the ones getting ignored, so start there.
 
-**Framework alignment is not optional.** Local governments were required to adopt cybersecurity standards consistent with the NIST Cybersecurity Framework. Entities with populations of 25,000 or more had until January 1, 2024. Smaller entities had until January 1, 2025.
+**Framework alignment is not optional.** Local governments were required to adopt cybersecurity standards consistent with best practices, including the NIST Cybersecurity Framework, and the deadlines were tiered by entity type. Counties with populations of 75,000 or more and municipalities with populations of 25,000 or more had until January 1, 2024. Smaller counties and municipalities had until January 1, 2025. The statute also requires each local government to notify the Florida Digital Service of its compliance, and FLDS runs an online attestation form for exactly that purpose, which matters later in this post.
 
 Both dates have passed. That is worth sitting with for a moment, because in my experience talking to small Florida jurisdictions, a meaningful share of them are not aligned, and some are not aware the requirement exists.
 
@@ -26,7 +26,7 @@ Both dates have passed. That is worth sitting with for a moment, because in my e
 
 Twelve hours is a genuinely short clock. It is shorter than the 72 hours federal contractors get under DFARS. If your incident response plan does not name the people who make that call and give them the contact paths in advance, you will spend a meaningful fraction of the window figuring out who to call, during the worst morning of your year.
 
-**Other cybersecurity incidents get 48 hours.** Reported as soon as possible, and no later than 48 hours after discovery.
+**Other serious incidents get 48 hours.** Cybersecurity incidents the local government determines to be severity level 3 or higher must be reported as soon as possible, and no later than 48 hours after discovery. Lower-severity incidents can be reported voluntarily, and the severity determination is yours to make and defend, which is its own reason to have a rating methodology written down before you need it.
 
 **You cannot pay.** Under 282.3186, a county or municipality experiencing a ransomware incident may not pay or otherwise comply with a ransom demand. Public funds cannot be used for ransom payments.
 
@@ -48,7 +48,7 @@ The practical consequence is uncomfortable and worth stating plainly. Florida im
 
 On May 22, 2026, the Governor signed [HB 1085](https://www.flsenate.gov/Session/Bill/2026/1085) into law as Chapter 2026-115. It took effect July 1, 2026.
 
-The bill creates a Local Government Cybersecurity Protection Program inside the Florida Digital Service. The Digital Service is directed to enter data sharing agreements with local governments, administer a grant program providing IT commodities and services for cybersecurity purposes, contract for and award IT resources to participating local governments, and report to the Governor's Office of Policy and Budget and legislative appropriations chairs.
+The bill creates a Local Government Cybersecurity Protection Program inside the Florida Digital Service, codified at section 282.31855. The Digital Service is directed to enter data sharing agreements with local governments, administer a grant program providing IT commodities and services for cybersecurity purposes, contract for and award IT resources to participating local governments, and report to the Governor's Office of Policy and Budget and legislative appropriations chairs. Note the mechanism: under the state's existing local government grant program, FLDS has procured cybersecurity solutions directly on behalf of awardees rather than cutting checks, and the new program is built the same way. You will not be handed money to figure out how to spend. You will be handed capabilities against a defined need, which is one more reason the defined need has to exist on paper first.
 
 It passed 109 to 0 and 104 to 1 in the House, and 37 to 0 and 39 to 0 in the Senate. Unanimous is rare and it tells you something about how the Legislature now views the risk profile of Florida's roughly 400 municipalities, many of which run IT on a headcount you could count on one hand.
 
@@ -68,7 +68,7 @@ That last one matters because the requirements stack. A Space Coast machine shop
 
 ## What to do
 
-1. **Determine your actual population tier and confirm alignment status in writing.** If you are a local government, your NIST CSF alignment deadline has passed. Knowing whether you met it is a five-minute question that many jurisdictions cannot currently answer.
+1. **Determine your actual tier and find your attestation.** Counties check against the 75,000 threshold, municipalities against 25,000, and either way your deadline has passed. The statute required you to notify the Florida Digital Service of compliance through its attestation process, so this is a records check, not a research project. If nobody in your building can produce the attestation, you have your answer.
 
 2. **Time your 12-hour clock.** Not the plan. The clock. Who declares a ransomware incident, who contacts the Cybersecurity Operations Center, FDLE Cybercrime, and the sheriff, and where those numbers live when email is down. Run it as a tabletop and record how long it actually took.
 
