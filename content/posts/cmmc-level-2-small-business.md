@@ -8,6 +8,8 @@ summary: "The final rule is live. Here is what small defense contractors need to
 author: "Cameron Hopkin"
 ---
 
+> **Update, August 11, 2026:** On July 13, 2026 the Department of War suspended CMMC Phase 2, along with Phases 3 and 4, and stood up a reform task force. The November 10, 2026 third-party certification deadline described throughout this post is no longer in effect. The underlying DFARS 252.204-7012 and NIST SP 800-171 obligations, the self-assessment, and the annual SPRS affirmation all remain binding. The scoping, POA&M, and False Claims Act sections below are still accurate and still worth reading. For the current picture, see [CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up.](/posts/cmmc-phase-2-suspended-self-reporting-risk/) This post is left up unedited as a record of where the program stood in March 2026.
+
 The CMMC program is no longer a future problem. It is a contract clause with a deadline that is already inside the planning horizon for anyone running a small defense business in 2026.
 
 Two final rules now govern the program. [32 CFR Part 170](https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-G/part-170) took effect on December 16, 2024 and defines the policy, the maturity levels, the assessment methodology, and the rules about what you can and cannot put on a Plan of Action and Milestones. The [48 CFR final rule](https://www.federalregister.gov/documents/2025/09/10/2025-17359/defense-federal-acquisition-regulation-supplement-assessing-contractor-implementation-of) published in the Federal Register on September 10, 2025 and became effective November 10, 2025. This is the one that put CMMC language into DFARS and gave contracting officers the authority to require it at award.
