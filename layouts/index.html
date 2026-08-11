@@ -16,10 +16,10 @@
                 <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min read</span>
                 {{ end }}
             </div>
-            {{ if .Description }}
-            <p class="post-excerpt">{{ .Description }}</p>
+            {{ with .Params.summary }}
+            <p class="post-excerpt">{{ . }}</p>
             {{ else }}
-            <p class="post-excerpt">{{ .Summary | truncate 200 }}</p>
+            <p class="post-excerpt">{{ .Summary | plainify | truncate 220 }}</p>
             {{ end }}
         </article>
         {{ end }}

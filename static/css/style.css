@@ -339,3 +339,62 @@ body {
         font-size: 1.75rem;
     }
 }
+
+/* ═══════════════════════════════════
+   TOPIC BROWSING
+   Term index and term pages. Added when the taxonomy templates were
+   introduced; previously these pages fell through to the post list layout.
+═══════════════════════════════════ */
+.list-intro {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.term-cloud {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 2.5rem;
+    padding: 0;
+}
+
+.term-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+}
+.term-pill:hover {
+    border-color: var(--accent-orange);
+    background: rgba(230, 126, 34, 0.12);
+}
+
+.term-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-orange);
+    background: rgba(230, 126, 34, 0.15);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+    min-width: 1.4rem;
+    text-align: center;
+}
+
+.back-link {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+.back-link a {
+    color: var(--accent-orange);
+    text-decoration: none;
+}
+.back-link a:hover { text-decoration: underline; }

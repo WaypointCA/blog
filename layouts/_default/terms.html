@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{/* Term index (/tags/, /categories/). Previously fell through to list.html,
+     which rendered every term as a fake post with a date and "0 min read". */}}
+<div class="list-page">
+    <h1>{{ .Title }}</h1>
+    <p class="list-intro">Browse {{ len .Data.Terms }} topics across {{ len (where .Site.RegularPages "Section" "posts") }} posts.</p>
+
+    <ul class="term-cloud">
+        {{ range .Data.Terms.ByCount }}
+        <li>
+            <a href="{{ .Page.Permalink }}" class="term-pill">
+                {{ .Page.Title }}<span class="term-count">{{ .Count }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

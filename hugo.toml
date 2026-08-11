@@ -24,9 +24,13 @@ title = "Waypoint Compliance Advisory | Blog"
     url = "/posts/"
     weight = 2
   [[menu.main]]
+    name = "Topics"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
     name = "Waypoint"
     url = "https://waypointca.com"
-    weight = 3
+    weight = 4
 
 [markup]
   [markup.highlight]
