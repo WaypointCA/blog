@@ -52,12 +52,12 @@
         "headline" .Title
         "description" $desc
         "datePublished" (.Date.Format "2006-01-02")
-        "dateModified" (.Lastmod.Format "2006-01-02")
+        "dateModified" (cond (isset .Params "lastreviewed") (.Params.lastReviewed | time.Format "2006-01-02") (.Lastmod.Format "2006-01-02"))
         "author" (dict "@type" "Person" "name" (.Params.author | default .Site.Params.author) "url" "https://waypointca.com")
         "publisher" (dict "@type" "Organization" "name" .Site.Params.company "url" "https://waypointca.com")
         "mainEntityOfPage" .Permalink
         "keywords" (delimit .Params.tags ", ")
-        | jsonify (dict "indent" "  ")
+        | jsonify (dict "indent" "  ") | safeJS
     }}
     </script>
     {{- end }}

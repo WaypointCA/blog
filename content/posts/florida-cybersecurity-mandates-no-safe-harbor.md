@@ -1,6 +1,7 @@
 ---
 title: "Florida Gave You the Mandate, Vetoed the Safe Harbor, and Just Funded the Fix"
 date: 2026-08-11
+lastReviewed: 2026-08-11
 draft: false
 tags: ["Florida", "State Government", "NIST CSF", "Local Government", "Ransomware", "Compliance"]
 categories: ["State"]

@@ -1,6 +1,7 @@
 ---
 title: "Your FedRAMP Package Has to Be Machine-Readable by September 30"
 date: 2026-08-11
+lastReviewed: 2026-08-11
 draft: false
 tags: ["FedRAMP", "FedRAMP 20x", "OSCAL", "Cloud Security", "Federal", "Compliance", "Generative AI"]
 categories: ["Federal"]

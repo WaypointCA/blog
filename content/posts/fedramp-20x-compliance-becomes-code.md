@@ -1,6 +1,7 @@
 ---
 title: "FedRAMP 20x Turns Compliance Into Code"
 date: 2026-08-11
+lastReviewed: 2026-08-11
 draft: false
 tags: ["FedRAMP", "FedRAMP 20x", "OSCAL", "Cloud Security", "Federal", "Compliance", "Generative AI"]
 categories: ["Federal"]

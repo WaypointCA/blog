@@ -1,6 +1,7 @@
 ---
 title: "CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up."
 date: 2026-08-11
+lastReviewed: 2026-08-11
 draft: false
 tags: ["CMMC 2.0", "NIST 800-171", "DFARS", "False Claims Act", "Defense", "DIB", "Compliance"]
 categories: ["Defense"]

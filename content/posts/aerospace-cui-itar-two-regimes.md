@@ -1,6 +1,7 @@
 ---
 title: "Aerospace Suppliers Are Governed by Two Rule Sets That Do Not Agree"
 date: 2026-08-11
+lastReviewed: 2026-08-11
 draft: false
 tags: ["Aerospace", "Space Systems", "ITAR", "NIST 800-171", "CUI", "CNSSI 1253", "Defense"]
 categories: ["Aerospace"]

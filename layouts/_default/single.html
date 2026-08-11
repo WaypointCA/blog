@@ -13,6 +13,11 @@
             {{ end }}
             <span>· {{ .Params.author | default .Site.Params.author }}</span>
         </div>
+        {{ with .Params.lastReviewed }}
+        {{/* Our content interprets rules that move. A visible review date makes
+             the fact-check discipline legible and gives us a maintenance hook. */}}
+        <p class="reviewed">Last reviewed: <time datetime="{{ . | time.Format "2006-01-02" }}">{{ . | time.Format "January 2, 2006" }}</time></p>
+        {{ end }}
         {{ with .Params.tags }}
         <div class="post-tags">
             {{ range . }}
@@ -25,6 +30,8 @@
     <div class="post-content">
         {{ .Content }}
     </div>
+
+    {{ partial "author-bio.html" . }}
 
     {{/* Prev/next within the posts section. A reader finishing an article
          previously had exactly one exit link. */}}
