@@ -1,7 +1,7 @@
 ---
 title: "Aerospace Suppliers Are Governed by Two Rule Sets That Do Not Agree"
-date: 2026-08-12
-draft: true
+date: 2026-08-11
+draft: false
 tags: ["Aerospace", "Space Systems", "ITAR", "NIST 800-171", "CUI", "CNSSI 1253", "Defense"]
 categories: ["Compliance", "Defense"]
 summary: "A NIST 800-171 environment can be fully compliant and still be an ITAR violation, because the two regimes ask different questions about the same data. Add national security space requirements and you have three overlapping rule sets on one server room."

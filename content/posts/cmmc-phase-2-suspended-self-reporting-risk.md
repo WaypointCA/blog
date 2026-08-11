@@ -8,7 +8,7 @@ summary: "The certification deadline is gone. The obligations are not, and the o
 author: "Cameron Hopkin"
 ---
 
-On July 13, 2026, the Department of War announced the immediate suspension of Phase 2 of the CMMC program. The memo behind the announcement is dated July 10 and signed by DoW Chief Information Officer Kirsten Davies. It suspends the November 10, 2026 requirement for third-party C3PAO certification as a condition of award, and it halts the Phase 3 and Phase 4 milestones behind it. It also stands up a CMMC Reform Task Force with 60 days to review the program and come back with recommendations.
+On July 13, 2026, the Department of Defense announced the immediate suspension of Phase 2 of the CMMC program. The memo behind the announcement is dated July 10 and signed by Chief Information Officer Kirsten Davies, under the Department of War branding the administration has adopted pending a congressional rename. It suspends the November 10, 2026 requirement for third-party C3PAO certification as a condition of award, and it halts the Phase 3 and Phase 4 milestones behind it. It also stands up a CMMC Reform Task Force with 60 days to review the program and come back with recommendations.
 
 The reason given was cost. [DoD officials said the math did not work](https://defensescoop.com/2026/07/13/dod-halts-cmmc-cybersecurity-requirements-phase-2/) for small and mid-sized businesses, and the Small Business Administration had been reporting that assessment costs were pushing companies out of the defense supply chain entirely. Anyone who quoted a small manufacturer a $75,000 assessment against a $400,000 annual DoD revenue line already knew this. The program was going to shrink the industrial base it was designed to protect.
 

@@ -8,7 +8,7 @@ summary: "The final rule is live. Here is what small defense contractors need to
 author: "Cameron Hopkin"
 ---
 
-> **Update, August 11, 2026:** On July 13, 2026 the Department of War suspended CMMC Phase 2, along with Phases 3 and 4, and stood up a reform task force. The November 10, 2026 third-party certification deadline described throughout this post is no longer in effect. The underlying DFARS 252.204-7012 and NIST SP 800-171 obligations, the self-assessment, and the annual SPRS affirmation all remain binding. The scoping, POA&M, and False Claims Act sections below are still accurate and still worth reading. For the current picture, see [CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up.](/posts/cmmc-phase-2-suspended-self-reporting-risk/) This post is left up unedited as a record of where the program stood in March 2026.
+> **Update, August 11, 2026:** On July 13, 2026 the Department of Defense suspended CMMC Phase 2, along with Phases 3 and 4, and stood up a reform task force. The November 10, 2026 third-party certification deadline described throughout this post is no longer in effect. The underlying DFARS 252.204-7012 and NIST SP 800-171 obligations, the self-assessment, and the annual SPRS affirmation all remain binding. The scoping, POA&M, and False Claims Act sections below are still accurate and still worth reading. For the current picture, see [CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up.](/posts/cmmc-phase-2-suspended-self-reporting-risk/) This post is left up unedited as a record of where the program stood in March 2026.
 
 The CMMC program is no longer a future problem. It is a contract clause with a deadline that is already inside the planning horizon for anyone running a small defense business in 2026.
 

@@ -8,7 +8,7 @@ summary: "Your CNC machines, PLCs, and IoT sensors are in scope. The question of
 author: "Cameron Hopkin"
 ---
 
-> **Update, August 11, 2026:** On July 13, 2026 the Department of War suspended CMMC Phase 2 and paused DIBCAC assessments pending a program review. The November 10, 2026 enforcement date referenced in this post is no longer in effect, and the C3PAO booking advice in the closing section is on hold. Everything here about OT scoping, Specialized Assets, and shop floor exposure still applies, because NIST SP 800-171 and DFARS 252.204-7012 still apply. If anything, the self-assessment scoping decisions described below now carry more weight, since no assessor is currently checking them. See [CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up.](/posts/cmmc-phase-2-suspended-self-reporting-risk/) for the current picture.
+> **Update, August 11, 2026:** On July 13, 2026 the Department of Defense suspended CMMC Phase 2 and paused DIBCAC assessments pending a program review. The November 10, 2026 enforcement date referenced in this post is no longer in effect, and the C3PAO booking advice in the closing section is on hold. Everything here about OT scoping, Specialized Assets, and shop floor exposure still applies, because NIST SP 800-171 and DFARS 252.204-7012 still apply. If anything, the self-assessment scoping decisions described below now carry more weight, since no assessor is currently checking them. See [CMMC Phase 2 Is Suspended. Your Legal Exposure Went Up.](/posts/cmmc-phase-2-suspended-self-reporting-risk/) for the current picture.
 
 Most small Florida manufacturers have not had the CMMC scoping conversation yet. Their assessor will make them have it.
 
